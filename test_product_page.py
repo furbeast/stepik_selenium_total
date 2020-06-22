@@ -8,9 +8,12 @@ from .pages.basket_page import BasketPage
 PRODUCT_LINK = 'http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/'
 LOGIN_LINK = 'http://selenium1py.pythonanywhere.com/accounts/login/'
 
-urls = [f'{PRODUCT_LINK}?promo=offer{n}' for n in range(10)]
-urls[7] = pytest.param(urls[7], marks=pytest.mark.xfail)
-# urls = [f'{PRODUCT_LINK}?promo=offer{n}' for n in range(1)]
+# urls = [f'{PRODUCT_LINK}?promo=offer{n}' for n in range(10)]
+# urls[7] = pytest.param(urls[7], marks=pytest.mark.xfail)
+
+# для ускорения процесса, если нужен полный прогон - нужно расскоментировать
+# 2 строчки над этим комментарием и закомментироать 1 под ним
+urls = [f'{PRODUCT_LINK}?promo=offer0']
 
 
 
